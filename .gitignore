@@ -1,4 +1,18 @@
+# Ignore build artifacts
 build/
-*.o
-compile_commands.json
+CMakeCache.txt
+CMakeFiles/
+conan.lock
+
+# Ignore system files
+.DS_Store
 .vscode/
+.idea/
+
+# Ignore compiled binaries
+*.o
+*.out
+*.exe
+*.a
+*.so
+*.dll
