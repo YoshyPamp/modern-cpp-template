@@ -1,8 +1,11 @@
+# Dependencies required for this project
+# Add, remove or update as needed
 [requires]
-nlohmann_json/3.11.2
-spdlog/1.11.0
-gtest/1.14.0
+nlohmann_json/3.11.2  # JSON for Modern C++
+spdlog/1.11.0         # Fast C++ logging library
+gtest/1.14.0          # Google Test framework for unit tests
 
+# Conan generators for CMake integration
 [generators]
 CMakeDeps
 CMakeToolchain

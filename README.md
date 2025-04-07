@@ -1,80 +1,99 @@
-# AI Procedural Generator (C++)
+# Modern C++ Project Template
+
+## ✨ Features
+- **Modern C++17** with CMake build system
+- **Docker-based development** environment with docker-compose
+- **Conan package management** for dependencies (nlohmann_json, spdlog, GTest)
+- **Component-based architecture** with UUID generation
+- **Automated code quality tools**:
+  - Clang-Format for code formatting
+  - Clang-Tidy for static analysis
+  - CppCheck for deeper code analysis
+- **Git best practices** & `.gitignore` included
 
 ## 🛠 Setup Instructions
 
-### **1. Install Prerequisites**
-- Install [Docker](https://www.docker.com/products/docker-desktop) (for running the development environment).
-- Ensure `make` is installed (comes preinstalled on macOS & Linux, install with `choco install make` on Windows).
+### **1. Use This Template**
+Click the "Use this template" button or clone this repository to start a new project.
 
-### **2. Clone the Repository**
+### **2. Prerequisites**
+- Install [Docker](https://www.docker.com/products/docker-desktop) (for running the development environment)
+- Ensure `make` is installed (comes preinstalled on macOS & Linux, install with `choco install make` on Windows)
+
+### **3. Clone Your New Repository**
 ```sh
-git clone <repo-url>
-cd <repo-name>
+git clone <your-new-repo-url>
+cd <your-project-name>
 ```
 
-### **3. Build & Run the Project**
+### **4. Customize the Project**
+- Update project name in `CMakeLists.txt`
+- Modify `src/main.cpp` for your application logic
+- Add your own components to `src/components/`
+
+### **5. Build & Run the Project**
 ```sh
 make run
 ```
 This will **build the Docker container** and start the C++ application inside it.
 
-### **4. Format Code**
+## 🚀 Development Workflow
+
+### **Format Code**
 ```sh
 make format
 ```
 Automatically formats all C++ source files using **Clang-Format**.
 
-### **5. Run Static Analysis**
+### **Run Static Analysis**
 ```sh
 make lint
 ```
 Runs **Clang-Tidy** for static analysis and best-practice suggestions.
 
-### **6. Perform Deeper Analysis**
+### **Perform Deeper Analysis**
 ```sh
 make check
 ```
 Runs **CppCheck** to find potential issues in the codebase.
 
-### **7. Enter the Development Shell**
+### **Enter the Development Shell**
 ```sh
 make shell
 ```
 Opens an interactive shell inside the Docker container for debugging.
 
-### **8. Stop the Project**
+### **Stop the Project**
 ```sh
 make stop
 ```
 Stops and removes the running container.
 
-### **9. Rebuild Everything (Clean Build)**
+### **Rebuild Everything (Clean Build)**
 ```sh
 make rebuild
 ```
 Completely **removes the existing container, images, and volumes**, then rebuilds from scratch.
 
----
-
-## 🚀 Features
-- Procedural content generation (**NPC Generator**).
-- **Docker-based development** for platform-independent builds.
-- **Conan package management** for handling dependencies.
-- **Automated code linting & static analysis**.
-- **Git best practices & `.gitignore` included**.
-
----
-
-## 👨‍💻 Contributing
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature-branch`).
-3. Make your changes and commit (`git commit -m "Add new feature"`).
-4. Push to the branch (`git push origin feature-branch`).
-5. Open a **pull request**.
-
----
+## 📂 Project Structure
+```
+.
+├── CMakeLists.txt         # CMake build configuration
+├── Dockerfile             # Docker container definition
+├── docker-compose.yml     # Docker orchestration
+├── Makefile               # Development commands
+├── include/               # Header files
+│   └── BaseComponent.hpp  # Base component interface
+├── src/                   # Source code
+│   ├── main.cpp           # Application entry point
+│   └── components/        # Component implementations
+│       └── BaseComponent.cpp
+└── .gitignore             # Git ignore file
+```
 
 ## 🌟 License
 This project is licensed under the **MIT License**.
 
-For any questions or contributions, contact **[Your Name]** at **[your-email@example.com]**.
+---
+
+*To make this template your own, replace this section with information about your specific project.*
