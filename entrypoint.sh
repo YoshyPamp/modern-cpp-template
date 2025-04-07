@@ -15,4 +15,4 @@ cmake -G Ninja -S /app -B /app/build
 ninja -C /app/build
 
 # Run the application
-exec /app/build/generator
+exec /app/build/ModernCppTemplate
