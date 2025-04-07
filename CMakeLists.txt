@@ -17,7 +17,7 @@ find_package(spdlog REQUIRED CONFIG)
 find_package(GTest REQUIRED CONFIG)
 
 # Ensure `main.cpp` is correctly linked
-add_executable(generator src/main.cpp)
+add_executable(generator src/main.cpp src/components/BaseComponent.cpp)
 
 # Link Conan-managed dependencies
 target_link_libraries(generator PRIVATE nlohmann_json::nlohmann_json spdlog::spdlog)
